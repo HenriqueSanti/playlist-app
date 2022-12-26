@@ -1,0 +1,27 @@
+{
+  "name": "playlist-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenriqueSanti/playlist-app.git"
+  },
+  "author": "Henrique Santi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenriqueSanti/playlist-app/issues"
+  },
+  "homepage": "https://github.com/HenriqueSanti/playlist-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1",
+    "nodemon": "^2.0.20"
+  }
+}
