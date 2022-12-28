@@ -12,12 +12,13 @@ const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 dbConnection();
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+  const playlist = await Music.find();
+  res.render("index", { playlist });
 });
 
 app.get("/register", (req, res) => {

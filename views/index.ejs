@@ -10,5 +10,14 @@
     <h1>Hello EJS</h1>
 
     <a href="/register">Register</a>
+
+    <% playlist.forEach((music)=>{ %>
+        <section>
+            <h2><%= music.name %></h2>
+            <p><%=music.author%></p>
+            <img src="<%=music.linkImage%>" alt="Image musice">
+            <audio controls src="<%=music.linkMusic%>"></audio>
+        </section>
+    <% }) %>    
 </body>
 </html>
