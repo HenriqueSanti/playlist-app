@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    padding: 2rem .4rem;
+    margin: 2rem 0;
+    justify-content: space-around;
+}
+
+.register {
+    text-decoration: none;
+    padding: .8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: plum;
+    color: rgb(51, 1, 51);
+    border-radius: .8rem;
+    transition: ease-in-out .2s;
+}
+
+.register:hover {
+    background-color: rgb(185, 127, 185);
+    color: rgb(95, 2, 95);
+}
+
+.play, .music {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 1rem;
+}
+
+img, h2, p {
+    margin-inline: .6rem;
+}
+
+img {
+    border-radius: .6rem;
+}
+
+form {
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+label {
+    align-self: flex-start;
+}
+
+input {
+    width: 100%;
+    padding: .8rem;
+    margin: .2rem;
+    border-radius: .8rem;
+    border: none;
+    background-color: gainsboro;
+}
+
+button {
+    width: 50%;
+    padding: .8rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: plum;
+    color: rgb(61, 2, 61);
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+button:hover {
+    background-color: rgb(185, 127, 185);
+    color: rgb(95, 2, 95);
+}
+
+section {
+    display: flex;
+    max-width: 100%;
+    margin-inline: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit, .delete {
+    text-decoration: none;
+    padding: .6rem .8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .8rem;
+    margin-inline: .2rem;
+    transition: ease-in-out .2s;
+}
+
+.edit {
+    background-color: rgb(216, 208, 216);
+    color: rgb(26, 19, 26);
+}
+
+.edit:hover {
+    background-color: rgb(159, 154, 159);
+    color: rgb(26, 19, 26);
+}
+
+.delete {
+    background-color: rgb(219, 123, 104);
+    color: rgb(41, 1, 5);
+}
+
+.delete:hover {
+    background-color: rgb(199, 80, 56);
+    color: rgb(35, 1, 4);
+}

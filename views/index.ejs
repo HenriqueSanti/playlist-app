@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="playlist with express">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Playlist</title>
 </head>
 <body>
-    <h1>Hello EJS</h1>
+    <nav>
+        <h1>Playlist</h1>
 
-    <a href="/register">Register</a>
+        <a href="/register" class="register">Add New Music</a>
+    </nav>
 
-    <% playlist.forEach((music)=>{ %>
-        <section>
-            <h2><%= music.name %></h2>
-            <p><%=music.author%></p>
-            <img src="<%=music.linkImage%>" alt="Image musice">
-            <audio controls src="<%=music.linkMusic%>"></audio>
-        </section>
-    <% }) %>    
+    <section>
+        <% playlist.forEach((music)=>{ %>
+            <div class="play">
+                <img src="<%=music.linkImage%>" alt="Image musice">
+                <h2><%= music.name %></h2>
+                <p><%=music.author%></p>
+                <audio controls src="<%=music.linkMusic%>"></audio>
+            </div>
+        <% }) %> 
+    </section>   
 </body>
 </html>

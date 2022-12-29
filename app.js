@@ -21,8 +21,9 @@ app.get("/", async (req, res) => {
   res.render("index", { playlist });
 });
 
-app.get("/register", (req, res) => {
-  res.render("register");
+app.get("/register", async (req, res) => {
+  const playlist = await Music.find();
+  res.render("register", { playlist });
 });
 
 app.post("/create", async (req, res) => {

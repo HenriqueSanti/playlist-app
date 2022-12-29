@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Register Playlist</title>
 </head>
 <body>
-    <h1>Register a new music</h1>
+    <nav>
+        <h1>Register a new music</h1>
+    </nav>
 
     <form action="create" method="post">
         <label for="name">Name:</label>
@@ -16,13 +19,27 @@
         <label for="author">Author:</label>
         <input type="text" name="author" id="author">
 
-        <label for="linkImage">Image:</label>
+        <label for="linkImage">Image Link:</label>
         <input type="text" name="linkImage" id="linkImage">
 
-        <label for="linkMusic">Music:</label>
+        <label for="linkMusic">Music Link:</label>
         <input type="text" name="linkMusic" id="linkMusic">
 
-        <button type="submit">Register</button>
+        <button type="submit">Add to Playlist</button>
     </form>
+
+    <section>
+        
+            <% playlist.forEach((music)=>{ %>
+                <div class="music">
+                    <img src="<%=music.linkImage%>" alt="Image musice">
+                    <h2><%= music.name %></h2>
+                    <p><%=music.author%></p>
+                    <a href="" class="edit">Edit</a>
+                    <a href="" class="delete">Delete</a>
+                </div>
+            <% }) %>
+        
+    </section>
 </body>
 </html>
